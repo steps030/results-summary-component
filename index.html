@@ -14,59 +14,96 @@
       href="./assets/images/favicon-32x32.png" />
 
     <title>Frontend Mentor | Results summary component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
   </head>
   <body>
     <main>
       <div class="card">
         <div class="card__result">
           <h2 class="card__headline card__headline--result">Your Result</h2>
-          <p class="card__score">76</p>
-          <p class="card__possible">of 100</p>
-          <h3 class="card__rating">Great</h3>
-          <p class="card__info">
-            You scored higher than 65% of the people who have taken these tests.</p
-          >
+          <div class="score-container">
+            <p class="card__score">76</p>
+            <p class="card__possible">of 100</p>
+          </div>
+          <div class="card-score-info">
+            <h3 class="card__rating">Great</h3>
+            <p class="card__info">
+              You scored higher than 65% of the people who have taken these
+              tests.</p
+            >
+          </div>
         </div>
         <div class="card__summary">
           <h2 class="card__headline card__headline--summary">Summary</h2>
           <ul class="card-list">
-            <li class="card-list__item"
-              ><img
-                class="card-list__img"
-                src="./assets/images/icon-reaction.svg"
-                alt="blitz" />Reaction <span>80</span>/ 100</li
-            >
-            <li class="card-list__item"
-              ><img
-                class="card-list__img"
-                src="./assets/images/icon-memory.svg"
-                alt="brain" />Memory <span>92</span>/ 100</li
-            >
-            <li class="card-list__item"
-              ><img
-                class="card-list__img"
-                src="./assets/images/icon-verbal.svg"
-                alt="verbal" />Verbal <span>61</span>/100</li
-            >
-            <li class="card-list__item"
-              ><img
-                class="card-list__img"
-                src="./assets/images/icon-visual.svg"
-                alt="eye" />Visual <span>72</span>/ 100</li
-            >
+            <li class="card-list__item card-list__item--reaction">
+              <div>
+                <img
+                  class="card-list__img"
+                  src="./assets/images/icon-reaction.svg"
+                  alt="lightning icon" />
+                <p class="card-list__label card-list__label--reaction"
+                  >Reaction</p
+                >
+              </div>
+              <div>
+                <span class="card-list__score-reached">80</span
+                ><span class="card-list__score-possible">/ 100</span></div
+              >
+            </li>
+            <li class="card-list__item card-list__item--memory">
+              <div>
+                <img
+                  class="card-list__img"
+                  src="./assets/images/icon-memory.svg"
+                  alt="brain-icon" />
+                <p class="card-list__label card-list__label--memory">Memory</p>
+              </div>
+              <div>
+                <span class="card-list__score-reached">92</span
+                ><span class="card-list__score-possible">/ 100</span></div
+              >
+            </li>
+            <li class="card-list__item card-list__item--verbal">
+              <div>
+                <img
+                  class="card-list__img"
+                  src="./assets/images/icon-verbal.svg"
+                  alt="speech bubble with minus" />
+                <p class="card-list__label card-list__label--verbal">Verbal</p>
+              </div>
+              <div>
+                <span class="card-list__score-reached">61</span
+                ><span class="card-list__score-possible">/ 100</span></div
+              >
+            </li>
+            <li class="card-list__item card-list__item--visual">
+              <div>
+                <img
+                  class="card-list__img"
+                  src="./assets/images/icon-visual.svg"
+                  alt="eye" />
+                <p class="card-list__label card-list__label--visual">Visual</p>
+              </div>
+              <div>
+                <span class="card-list__score-reached">72</span
+                ><span class="card-list__score-possible">/ 100</span></div
+              >
+            </li>
           </ul>
-          <button>Continue</button>
+          <button class="card-btn">Continue</button>
         </div>
       </div>
     </main>

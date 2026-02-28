@@ -1,0 +1,263 @@
+/* 00: Styles */
+:root {
+  /* 01: Colors: Primary */
+  --color-light-red: hsl(0, 100%, 67%);
+  --color-light-red-background: hsla(0, 100%, 98%, 1);
+  --color-orangey-yellow: hsl(39, 100%, 56%);
+  --color-orangey-yellow-background: hsla(39, 100%, 56%, 0.1);
+  --color-green-teal: hsl(166, 100%, 37%);
+  --color-green-teal-background: hsla(166, 100%, 37%, 0.1);
+  --color-cobalt-blue: hsl(234, 85%, 45%);
+  --color-cobalt-blue-background: hsla(234, 85%, 45%, 0.1);
+  --color-box-shadow: hsl(0, 2%, 42%);
+  --color-background-body: hsl(234, 71%, 97%);
+  /* 02: Colors: Gradients */
+  --light-slate-blue-background: hsl(252, 100%, 67%);
+  --light-royal-blue-background: hsl(241, 81%, 54%);
+  --violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  /* 03: Colors: Gradients */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-grey-blue: hsl(224, 30%, 27%);
+  --dark-grey-blue-font: hsla(224, 30%, 27%, 100%);
+
+  /* 04: Typography */
+  --paragraph-font: 1.8rem;
+  --color-font-grey: hsl(224, 8%, 62%); /* 05: Font */
+  --font-family-base: 'Hanken Grotesk', sans-serif;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+}
+
+/* 01: Universal Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background: var(--color-background-body);
+}
+
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .card {
+    min-width: 686px;
+    max-width: 736px;
+    display: flex;
+    border-radius: 3.2rem;
+    overflow: hidden;
+  }
+
+  .card__result {
+    gap: 2rem;
+    flex: 0 1 338px;
+    border-top-right-radius: 3.2rem;
+    border-bottom-right-radius: 3.2rem;
+  }
+  .card__summary {
+    flex: 0 1 348px;
+  }
+
+  .card-btn:active {
+    background: linear-gradient(
+      to bottom,
+      var(--light-slate-blue-background),
+      var(--light-royal-blue-background)
+    );
+  }
+}
+
+/* Card Result */
+.card__result {
+  background: linear-gradient(
+    to bottom,
+    var(--light-slate-blue-background),
+    var(--light-royal-blue-background)
+  );
+  color: var(--white);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 3.2rem;
+  border-bottom-right-radius: 3.2rem;
+}
+
+.card__headline {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .card__headline {
+    font-size: 2.4rem;
+  }
+}
+
+.card__headline--result {
+  color: var(--light-lavender);
+}
+
+.score-container {
+  background: linear-gradient(
+    var(--violet-blue-circle),
+    var(--persian-blue-circle)
+  );
+  height: 14rem;
+  width: 14rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .score-container {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+.card-score-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__score {
+  font-size: 5.6rem;
+  font-weight: var(--font-weight-700);
+}
+.card__possible {
+  color: var(--light-lavender);
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-700);
+}
+
+.card__rating {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .card__rating {
+    font-size: 3.2rem;
+  }
+}
+
+.card__info {
+  font-size: var(--paragraph-font);
+  font-weight: 300;
+  color: var(--light-lavender);
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Card Summary */
+.card__summary {
+  background-color: var(--white);
+  padding: 3rem;
+}
+
+.card__headline--summary {
+  color: var(--dark-grey-blue);
+  margin-bottom: 1.8rem;
+}
+
+.card-list {
+  list-style-type: none;
+  margin-bottom: 2.8rem;
+}
+
+.card-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  font-size: var(--paragraph-font);
+  margin-bottom: 2rem;
+  padding: 20px;
+}
+
+.card-list__item--reaction {
+  background-color: var(--color-light-red-background);
+  font-weight: var(--font-weight-500);
+  box-shadow: 0 0.2rem 1rem -0.5rem var(--color-box-shadow);
+}
+.card-list__item--memory {
+  background-color: var(--color-orangey-yellow-background);
+  font-weight: var(--font-weight-500);
+}
+.card-list__item--verbal {
+  background-color: var(--color-green-teal-background);
+  font-weight: var(--font-weight-500);
+}
+.card-list__item--visual {
+  background-color: var(--color-cobalt-blue-background);
+  font-weight: var(--font-weight-500);
+}
+
+.card-list__item div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-list__label {
+  color: var(--dark-grey-blue-font);
+}
+.card-list__label--reaction {
+  color: var(--color-light-red);
+}
+.card-list__label--memory {
+  color: var(--color-orangey-yellow);
+}
+.card-list__label--verbal {
+  color: var(--color-green-teal);
+}
+.card-list__label--visual {
+  color: var(--color-cobalt-blue);
+}
+
+.card-list__score-reached {
+  color: var(--dark-grey-blue);
+  font-weight: var(--font-weight-500);
+}
+
+.card-list__score-possible {
+  color: var(--color-font-grey);
+}
+
+.card-btn {
+  background-color: var(--dark-grey-blue);
+  color: var(--white);
+  font-size: var(--paragraph-font);
+  font-weight: var(--font-weight-700);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 12.8rem;
+  display: block;
+  cursor: pointer;
+  border: none;
+}
