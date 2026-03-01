@@ -63,6 +63,7 @@ body {
     display: flex;
     border-radius: 3.2rem;
     overflow: hidden;
+    background-color: var(--white);
   }
 
   .card__result {
